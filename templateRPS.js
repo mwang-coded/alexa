@@ -8,7 +8,7 @@ const REPROMPT = "Still there?";
 const handlers = {
     
     'LaunchRequest': function () {
-        var speechOutput = "CHANGE THIS: alexa's response after invocation";
+        var speechOutput = "Let's play Rock, Paper, Scissors! Ready, set go!";
         
         this.response.speak(speechOutput).listen(REPROMPT);
         this.emit(':responseReady');
@@ -28,15 +28,14 @@ const handlers = {
         var win = yourMove == "rock" && alexaMove == "scissors" ||
                   yourMove == "scissors" && alexaMove == "paper" ||
                   yourMove == "paper" && alexaMove == "rock";
+        var lose;
+        var tie;
         
         if (win) {
             speechOutput = "Aww... I chose " + alexaMove + ". You win! " + winSound;
         } else if (lose) {
         } else if (tie) {
         }
-          
-          
-        var speechOutput = "CHANGE THIS: alexa's response after utterance for first intent";
         
         this.response.speak(speechOutput).listen(REPROMPT);
         this.emit(':responseReady');
