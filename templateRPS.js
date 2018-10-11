@@ -42,28 +42,28 @@ const handlers = {
     },
     
     'AMAZON.HelpIntent': function () {
-        var speechOutput = "CHANGE THIS: alexa's response after help";
+        var speechOutput = "To play, choose rock, paper, or scissors.";
         
         this.response.speak(speechOutput).listen(REPROMPT);
         this.emit(':responseReady');
     },
     
     'AMAZON.CancelIntent': function () {
-        var speechOutput = "CHANGE THIS: alexa's response after cancel";
+        var speechOutput = "Buh bye!";
         
         this.response.speak(speechOutput);
         this.emit(':responseReady');
     },
     
     'AMAZON.StopIntent': function () {
-        var speechOutput = "CHANGE THIS: alexa's response after stop";
+        var speechOutput = "Later gator!";
         
         this.response.speak(speechOutput);
         this.emit(':responseReady');
     },
     
     'AMAZON.FallbackIntent': function () {
-        var speechOutput = "CHANGE THIS: alexa's response for unrecognized";
+        var speechOutput = "Eh? I didn't quite hear that.";
         
         this.response.speak(speechOutput).listen(REPROMPT);
         this.emit(':responseReady');
