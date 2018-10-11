@@ -8,7 +8,7 @@ const REPROMPT = "Still there?";
 const handlers = {
     
     'LaunchRequest': function () {
-        var speechOutput = "Let's play Rock, Paper, Scissors! Ready, set go!";
+        var speechOutput = "Let's play Rock, Paper, Scissors! Ready... set, go!";
         
         this.response.speak(speechOutput).listen(REPROMPT);
         this.emit(':responseReady');
@@ -32,7 +32,7 @@ const handlers = {
         var tie;
         
         if (win) {
-            speechOutput = "Aww... I chose " + alexaMove + ". You win! " + winSound;
+            speechOutput = "Awwuwuh... I chose " + alexaMove + ". You win! " + winSound;
         } else if (lose) {
         } else if (tie) {
         }
@@ -56,7 +56,7 @@ const handlers = {
     },
     
     'AMAZON.StopIntent': function () {
-        var speechOutput = "Later gator!";
+        var speechOutput = "Later, gator!";
         
         this.response.speak(speechOutput);
         this.emit(':responseReady');
