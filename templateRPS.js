@@ -25,6 +25,8 @@ const handlers = {
         var alexaMove = moveList[randomIndex];
         var yourMove = this.event.request.intent.slots.myMove.value;
         
+        //============================================================================================================
+        
         var win = yourMove == "rock" && alexaMove == "scissors" ||
                   yourMove == "scissors" && alexaMove == "paper" ||
                   yourMove == "paper" && alexaMove == "rock";
@@ -34,8 +36,12 @@ const handlers = {
         if (win) {
             speechOutput = "Aw, boo... I chose " + alexaMove + ". You win! " + winSound;
         } else if (lose) {
+            
         } else if (tie) {
+            
         }
+        
+        //============================================================================================================
         
         this.response.speak(speechOutput).listen(REPROMPT);
         this.emit(':responseReady');
