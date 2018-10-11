@@ -32,7 +32,7 @@ const handlers = {
         var tie;
         
         if (win) {
-            speechOutput = "Awwuwuh... I chose " + alexaMove + ". You win! " + winSound;
+            speechOutput = "Aw, boo... I chose " + alexaMove + ". You win! " + winSound;
         } else if (lose) {
         } else if (tie) {
         }
