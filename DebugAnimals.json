@@ -1,0 +1,63 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "debug animal noises",
+            "intents": [
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "CatIntent",
+                    "slots": [],
+                    "samples": [
+                        "talk like a cat"
+                    ]
+                },
+                {
+                    "name": "DogIntent",
+                    "slots": [],
+                    "samples": [
+                        "talk like a dog"
+                    ]
+                },
+                {
+                    "name": "LionIntent",
+                    "slots": [],
+                    "samples": [
+                        "talk like a lion"
+                    ]
+                },
+                {
+                    "name": "AfterLionIntent",
+                    "slots": [
+                        {
+                            "name": "myColor",
+                            "type": "AMAZON.Color"
+                        }
+                    ],
+                    "samples": [
+                        "my favorite color is {myColor}"
+                    ]
+                }
+            ],
+            "types": []
+        }
+    }
+}
