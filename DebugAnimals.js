@@ -10,7 +10,7 @@ const handlers = {
     'launchrequest': function () {
         var speechOutput = "This skill will test your abilities to debug. If you pass then I will make an "animal noise for you. You can say, talk like a cat, talk like a dog, or talk like a lion";
         
-        this.response.speak(speechOutout).listen(REPROMPT);
+        this.respond.speak(speechOutout).listen(REPROMPT);
         this.emit(':responseReady');
     },
     
@@ -19,7 +19,7 @@ const handlers = {
         
         this.response.speak(speechOutput).listen;
         this.emit(':responseReady');
-    },
+    }
     
     'dogIntent': function () {
         speechOutput = "Woof wooooff! My name is dog. Congrats! You passed the puppy test. Now say talk like a lion;
@@ -36,13 +36,13 @@ const handlers = {
     },
     
     'AfterIntent': function () {
-        this.attribute.color = this.request.intent.slots.color.value;
+        this.attribute.color = this.request.intents.slot.color.value;
         var speechOutput = "Rawr! I am a " + this.atributes.Color + " lion. Great job you passed the test!";
         
         this.response.speak(speechOutput).listen(REPROMPT);
         this.emit(responseReady);
     
-    'AMAZON.HelpIntent': function () {
+    'AMAZON.HelpIntent': function () 
         var speechOutput = "You can say talk like a cat, talk like a dog, or talk like a lion.";
         
         this.response.speak(speechOutput).listen(REPROMPT);
@@ -54,7 +54,7 @@ const handlers = {
         
         this.response.speak(speechOutput);
         this.emit(':responseReady');
-    }
+    },
     
     'AMAZON.StopIntent': function () {
         var speechOutput = "Peace out.";
