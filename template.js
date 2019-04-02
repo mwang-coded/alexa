@@ -8,49 +8,49 @@ const REPROMPT = "Still there?";
 const handlers = {
     
     'LaunchRequest': function () {
-        var speechOutput = "CHANGE THIS: alexa's response after invocation";
+        var speechOutput = "Welcome! ";
         
         this.response.speak(speechOutput).listen(REPROMPT);
         this.emit(':responseReady');
     },
     
     'FirstIntent': function () {
-        var speechOutput = "CHANGE THIS: alexa's response after utterance for first intent";
+        var speechOutput = "";
         
         this.response.speak(speechOutput).listen(REPROMPT);
         this.emit(':responseReady');
     },
     
     'SecondIntent': function () {
-        var speechOutput = "CHANGE THIS: alexa's response after utterance for second intent";
+        var speechOutput = "";
         
         this.response.speak(speechOutput).listen(REPROMPT);
         this.emit(':responseReady');
     },
     
     'AMAZON.HelpIntent': function () {
-        var speechOutput = "CHANGE THIS: alexa's response after help";
+        var speechOutput = "Try saying something like: ";
         
         this.response.speak(speechOutput).listen(REPROMPT);
         this.emit(':responseReady');
     },
     
     'AMAZON.CancelIntent': function () {
-        var speechOutput = "CHANGE THIS: alexa's response after cancel";
+        var speechOutput = "Sure. Closing skill... Goodbye! ";
         
         this.response.speak(speechOutput);
         this.emit(':responseReady');
     },
     
     'AMAZON.StopIntent': function () {
-        var speechOutput = "CHANGE THIS: alexa's response after stop";
+        var speechOutput = "Sure. Closing skill... Goodbye! ";
         
         this.response.speak(speechOutput);
         this.emit(':responseReady');
     },
     
     'AMAZON.FallbackIntent': function () {
-        var speechOutput = "CHANGE THIS: alexa's response for unrecognized";
+        var speechOutput = "I don't understand that. ";
         
         this.response.speak(speechOutput).listen(REPROMPT);
         this.emit(':responseReady');
